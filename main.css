@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 300px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+.hidden {
+  display: none;
+}
+
+.storage {
+  margin-top: 20px;
+}
+
+.avatar {
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  float: right;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.menu button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px;
+  text-align: left;
+}
+
+.storage-info {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.help {
+  margin-top: 10px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+}

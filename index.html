@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Drive Kopija</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div id="auth-section">
+    <h2>Pierakstīties</h2>
+    <input type="email" id="login-email" placeholder="E-pasts" />
+    <input type="password" id="login-password" placeholder="Parole" />
+    <button onclick="login()">Ieiet</button>
+    <p><a href="#" onclick="showRegister()">Izveidot kontu</a> | <a href="#" onclick="showReset()">Aizmirsu paroli</a></p>
+    <p class="help">Ir problēmas? Raksti uz datasecure510@gmail.com</p>
+  </div>
+
+  <div id="register-section" class="hidden">
+    <h2>Izveidot kontu</h2>
+    <input type="text" id="reg-name" placeholder="Vārds Uzvārds" />
+    <input type="email" id="reg-email" placeholder="E-pasts" />
+    <input type="password" id="reg-password" placeholder="Parole" />
+    <input type="number" id="reg-day" placeholder="Dzimšanas diena" />
+    <input type="number" id="reg-month" placeholder="Mēnesis" />
+    <input type="number" id="reg-year" placeholder="Gads" />
+    <select id="reg-gender">
+      <option>Vīrietis</option>
+      <option>Sieviete</option>
+    </select>
+    <button onclick="register()">Izveidot kontu</button>
+  </div>
+
+  <div id="reset-section" class="hidden">
+    <h2>Paroles atjaunošana</h2>
+    <input type="email" id="reset-email" placeholder="Gmail adrese" />
+    <button onclick="sendVerification()">Sūtīt kodu</button>
+    <input type="text" id="reset-code" placeholder="Verifikācijas kods" />
+    <input type="password" id="new-password" placeholder="Jaunā parole" />
+    <input type="password" id="new-password-repeat" placeholder="Atkārtoti parole" />
+    <button onclick="resetPassword()">Mainīt paroli</button>
+  </div>
+
+  <div id="drive-section" class="hidden">
+    <div class="header">
+      <span class="avatar" onclick="toggleMenu()">D</span>
+      <div id="menu" class="hidden">
+        <button onclick="showPasswordChange()">Mainīt paroli</button>
+        <button onclick="logout()">Izrakstīties</button>
+      </div>
+    </div>
+    <div class="storage-info">Izmantots: <span id="used-gb">0</span>/100 GB</div>
+    <div class="storage">
+      <input type="file" id="fileInput" />
+      <button onclick="uploadFile()">+</button>
+      <ul id="fileList"></ul>
+    </div>
+    <p class="help">Ir problēmas? Raksti uz datasecure510@gmail.com</p>
+  </div>
+
+  <div id="password-change-section" class="hidden">
+    <h2>Mainīt paroli</h2>
+    <input type="password" id="newPass1" placeholder="Jaunā parole" />
+    <input type="password" id="newPass2" placeholder="Atkārtoti parole" />
+    <button onclick="changePassword()">Mainīt paroli</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
